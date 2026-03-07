@@ -11,7 +11,7 @@ concurrency:
 
 jobs:
   release:
-    if: github.repository == 'protohiro-com/states'
+    if: github.repository == 'protohiro-com/state-layers'
     runs-on: ubuntu-latest
     permissions:
       contents: write

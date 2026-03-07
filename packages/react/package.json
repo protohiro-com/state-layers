@@ -9,12 +9,12 @@
   "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/protohiro-com/states.git",
+    "url": "git+https://github.com/protohiro-com/state-layers.git",
     "directory": "packages/react"
   },
-  "homepage": "https://github.com/protohiro-com/states#readme",
+  "homepage": "https://github.com/protohiro-com/state-layers#readme",
   "bugs": {
-    "url": "https://github.com/protohiro-com/states/issues"
+    "url": "https://github.com/protohiro-com/state-layers/issues"
   },
   "publishConfig": {
     "access": "public"

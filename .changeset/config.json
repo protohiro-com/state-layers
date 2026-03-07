@@ -1,6 +1,6 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@3.0.3/schema.json",
-  "changelog": ["@changesets/cli/changelog", { "repo": "protohiro-com/states" }],
+  "changelog": ["@changesets/cli/changelog", { "repo": "protohiro-com/state-layers" }],
   "commit": false,
   "fixed": [],
   "linked": [],
