@@ -1,7 +1,7 @@
 {
   "name": "@protohiro/state-layers",
   "version": "0.1.1",
-  "description": "React hooks for visual state layers on existing elements.",
+  "description": "React hooks for focus rings, invalid states, loading sheens, and other visual state layers on existing elements. Demo: https://libs.protohiro.com/state-layers",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/protohiro-com/state-layers.git",
     "directory": "packages/react"
   },
-  "homepage": "https://github.com/protohiro-com/state-layers#readme",
+  "homepage": "https://libs.protohiro.com/state-layers",
   "bugs": {
     "url": "https://github.com/protohiro-com/state-layers/issues"
   },
