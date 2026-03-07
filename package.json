@@ -1,0 +1,28 @@
+{
+  "name": "protohiro-state-layers",
+  "private": true,
+  "version": "0.0.0",
+  "packageManager": "pnpm@10.30.3",
+  "devDependencies": {
+    "@changesets/cli": "^2.30.0",
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.3.0",
+    "eslint": "^10.0.3",
+    "globals": "^17.4.0",
+    "publint": "^0.3.18",
+    "typescript-eslint": "^8.56.1"
+  },
+  "scripts": {
+    "build": "pnpm -r build",
+    "changeset": "changeset",
+    "dev": "pnpm --filter @protohiro/state-layers-demo dev",
+    "lint": "eslint .",
+    "pack:check": "pnpm --filter @protohiro/state-layers pack:check",
+    "publint": "pnpm exec publint packages/react",
+    "release": "changeset publish",
+    "test": "pnpm --filter @protohiro/state-layers test",
+    "typecheck": "pnpm -r typecheck",
+    "verify": "pnpm lint && pnpm typecheck && pnpm test && pnpm build && pnpm pack:check && pnpm publint",
+    "version-packages": "changeset version"
+  }
+}
