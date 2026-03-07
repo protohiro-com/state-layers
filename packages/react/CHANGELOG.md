@@ -1,5 +1,11 @@
 # @protohiro/state-layers
 
+## 0.1.2
+
+### Patch Changes
+
+- Update npm package metadata and published README with a clearer package description and direct demo link.
+
 ## 0.1.1
 
 ### Patch Changes
