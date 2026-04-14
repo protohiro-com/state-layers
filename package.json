@@ -2,7 +2,10 @@
   "name": "protohiro-state-layers",
   "private": true,
   "version": "0.0.0",
-  "packageManager": "pnpm@10.30.3",
+  "packageManager": "npm@10.9.2",
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
     "@changesets/cli": "^2.30.0",
     "@eslint/js": "^10.0.1",
@@ -10,19 +13,19 @@
     "eslint": "^10.0.3",
     "globals": "^17.4.0",
     "publint": "^0.3.18",
+    "typescript": "^5.9.2",
     "typescript-eslint": "^8.56.1"
   },
   "scripts": {
-    "build": "pnpm -r build",
+    "build": "npm run --workspaces --if-present build",
     "changeset": "changeset",
-    "dev": "pnpm --filter @protohiro/state-layers-demo dev",
     "lint": "eslint .",
-    "pack:check": "pnpm --filter @protohiro/state-layers pack:check",
-    "publint": "pnpm exec publint packages/react",
+    "pack:check": "npm run -w @protohiro/state-layers pack:check",
+    "publint": "npm exec publint -- packages/react",
     "release": "changeset publish",
-    "test": "pnpm --filter @protohiro/state-layers test",
-    "typecheck": "pnpm -r typecheck",
-    "verify": "pnpm lint && pnpm typecheck && pnpm test && pnpm build && pnpm pack:check && pnpm publint",
+    "test": "npm run -w @protohiro/state-layers test",
+    "typecheck": "npm run --workspaces --if-present typecheck",
+    "verify": "npm run lint && npm run typecheck && npm run test && npm run build && npm run pack:check && npm run publint",
     "version-packages": "changeset version"
   }
 }

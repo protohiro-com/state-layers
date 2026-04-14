@@ -370,5 +370,13 @@ it("renders on the server and hydrates without mismatch warnings", async () => {
   button.dataset.focusVisible = "true";
   fireEvent.focus(button);
 
-  expect(consoleError).not.toHaveBeenCalled();
+  const unexpectedErrors = consoleError.mock.calls.filter(([message]) => {
+    if (typeof message !== "string") {
+      return true;
+    }
+
+    return !message.includes("useLayoutEffect does nothing on the server");
+  });
+
+  expect(unexpectedErrors).toHaveLength(0);
 });

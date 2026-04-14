@@ -14,14 +14,31 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
         with:
-          version: 10.30.3
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run verify
+
+  react-compat:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        react-major: [18, 19]
+
+    steps:
+      - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: pnpm
+          cache: npm
 
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm verify
+      - run: npm ci
+      - run: npm install -w @protohiro/state-layers --no-save -D react@^${{ matrix.react-major }} react-dom@^${{ matrix.react-major }} @types/react@^${{ matrix.react-major }} @types/react-dom@^${{ matrix.react-major }}
+      - run: npm run -w @protohiro/state-layers typecheck
+      - run: npm run -w @protohiro/state-layers test
+      - run: npm run -w @protohiro/state-layers build

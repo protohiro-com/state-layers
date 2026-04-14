@@ -19,16 +19,13 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 10.30.3
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: pnpm
+          cache: npm
           registry-url: 'https://registry.npmjs.org'
-      - run: pnpm install --no-frozen-lockfile
-      - run: pnpm build
+      - run: npm ci
+      - run: npm run build
       - name: Force npm auth file
         run: |
           echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
@@ -44,7 +41,7 @@ jobs:
       - name: Create release PR or publish
         uses: changesets/action@v1
         with:
-          publish: pnpm changeset publish
+          publish: npx changeset publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

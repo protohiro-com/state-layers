@@ -108,7 +108,6 @@ Each state layer must verify:
 ## Repo Shape
 
 - `packages/react` publishes `@protohiro/state-layers`
-- `apps/demo` exists to prove the hooks on real elements, not to justify API experiments
 - shared runtime logic should stay small and live in the React package until duplication demands otherwise
 
 ## Current Foundation Expectations
