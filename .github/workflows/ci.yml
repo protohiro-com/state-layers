@@ -38,7 +38,7 @@ jobs:
           cache: npm
 
       - run: npm ci
-      - run: npm install -w @protohiro/state-layers --no-save -D react@^${{ matrix.react-major }} react-dom@^${{ matrix.react-major }} @types/react@^${{ matrix.react-major }} @types/react-dom@^${{ matrix.react-major }}
+      - run: npm install --no-save -D react@^${{ matrix.react-major }} react-dom@^${{ matrix.react-major }} @types/react@^${{ matrix.react-major }} @types/react-dom@^${{ matrix.react-major }}
       - run: npm run -w @protohiro/state-layers typecheck
       - run: npm run -w @protohiro/state-layers test
       - run: npm run -w @protohiro/state-layers build
