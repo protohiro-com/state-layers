@@ -2,6 +2,8 @@
 
 Protohiro State Layers is a small React library for visual state layers on existing elements. It focuses on the narrow problem of rendering states like focus, invalid, and loading without wrapper components or runtime geometry work.
 
+Demo: https://protohiro.com/labs/state-layers
+
 Supported React versions: `18.x` and `19.x`.
 
 This library is for design systems and product surfaces that already have real elements, existing class names, forwarded refs, and their own business state. It is not a component kit, not a validation engine, and not another state-management abstraction.

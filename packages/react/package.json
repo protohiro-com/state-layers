@@ -12,7 +12,7 @@
     "url": "git+https://github.com/protohiro-com/state-layers.git",
     "directory": "packages/react"
   },
-  "homepage": "https://github.com/protohiro-com/state-layers/tree/main/packages/react",
+  "homepage": "https://protohiro.com/labs/state-layers",
   "bugs": {
     "url": "https://github.com/protohiro-com/state-layers/issues"
   },
