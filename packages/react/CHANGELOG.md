@@ -1,5 +1,11 @@
 # @protohiro/state-layers
 
+## 0.1.5
+
+### Patch Changes
+
+- 6af5831: Add package keywords so npm metadata no longer shows `Keywords: none`.
+
 ## 0.1.4
 
 ### Patch Changes
