@@ -1,5 +1,11 @@
 # @protohiro/state-layers
 
+## 0.1.4
+
+### Patch Changes
+
+- ff046d6: Update the demo link in the published README and set the npm homepage to https://protohiro.com/labs/state-layers.
+
 ## 0.1.3
 
 ### Patch Changes
