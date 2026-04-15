@@ -2,6 +2,16 @@
   "name": "@protohiro/state-layers",
   "version": "0.1.4",
   "description": "React hooks for focus rings, invalid states, loading sheens, and other visual state layers on existing elements.",
+  "keywords": [
+    "react",
+    "hooks",
+    "state-layers",
+    "focus-ring",
+    "invalid-state",
+    "loading-sheen",
+    "design-system",
+    "css-variables"
+  ],
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.cjs",
